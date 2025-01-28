@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 ![Logo](./assets/Cover.png)
-=======
-![Logo](./assets/todolist.png)
->>>>>>> refs/remotes/origin/main
+
 
 # ToDo List
 
