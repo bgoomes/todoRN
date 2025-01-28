@@ -1,4 +1,4 @@
-![Logo](./todolist.png)
+![Logo](./assets/todolist.png)
 
 # ToDo List
 
