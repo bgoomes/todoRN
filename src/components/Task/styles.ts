@@ -9,6 +9,8 @@ export const styles = StyleSheet.create({
    },
    content: {
     justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
     padding:12,
     height: 64,
 
@@ -23,5 +25,6 @@ export const styles = StyleSheet.create({
    title: {
     color: '#f2f2f2',
     fontSize: 14,
+    flex: 1,
    }
 })
