@@ -1,7 +1,11 @@
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 
-export function Control(){
+type Props = {
+    created: number
+}
+
+export function Control({ created }: Props){
 
     return (
         <View style={styles.container}>
@@ -10,7 +14,7 @@ export function Control(){
                     Criadas
                 </Text>
                 <View style={styles.div}>
-                    <Text style={styles.contador}>0</Text>
+                    <Text style={styles.contador}>{created}</Text>
                 </View>
             </View>
             
