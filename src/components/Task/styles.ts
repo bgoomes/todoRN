@@ -26,5 +26,29 @@ export const styles = StyleSheet.create({
     color: '#f2f2f2',
     fontSize: 14,
     flex: 1,
+    marginLeft: 14,
+   },
+   title1: {
+    color: '#f5f5f5',
+    fontSize: 14,
+    textDecorationLine: 'line-through',
+    flex: 1,
+    marginLeft: 14,
+   },
+   check:{
+      width: 20,
+      height: 20,
+      borderRadius: 12,
+      backgroundColor: '#8284fa',
+      justifyContent: 'center',
+      alignItems: 'center',
+   },
+   uncheck:{
+      width: 20,
+      height: 20,
+      borderRadius: 12,
+      backgroundColor: '#333',
+      justifyContent: 'center',
+      alignItems: 'center',
    }
 })
