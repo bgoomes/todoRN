@@ -8,20 +8,17 @@ import { useState } from "react";
 type Props ={
     title: string;
     onRemove: () => void;
+    onCheck?: () => void;
+    checked?: boolean;
 }
 
 
-export function Task({title, onRemove}: Props){
-    const [checked, setChecked] = useState(false);
-    const [close, setClose] = useState('');
+export function Task({title, onRemove, onCheck, checked}: Props){
     
-    function checke(){
-        setChecked((prevState) => !checked);
-    }
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <TouchableOpacity style={checked ? styles.check : styles.uncheck} onPress={checke}>
+                <TouchableOpacity style={checked ? styles.check : styles.uncheck} onPress={onCheck}>
                     {checked ? <Text style={{color: '#fff'}}>✓</Text> : null}
                 </TouchableOpacity>
                 {checked ? <Text style={styles.title1}>{title}</Text> : <Text style={styles.title}>{title}</Text>}

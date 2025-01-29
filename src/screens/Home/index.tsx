@@ -9,6 +9,8 @@ import { Task } from "../../components/Task";
 export function Home(){
     const [value, setValue] = useState<string>('');
     const [task, setTask] = useState<string[]>([]);
+    const [ckecked, setChecked] = useState<boolean>(false);
+    const [completed, setCompleted] = useState<number>(0);
 
     function handleNewTask(){
         setTask([...task, value]);
@@ -16,6 +18,10 @@ export function Home(){
     }
     function handleRemove(item: string){
         setTask(task.filter(task => task !== item));
+    }
+
+    function habdleCheck(item: string){
+        setChecked((prevState) => !ckecked);
     }
 
     return (
@@ -33,10 +39,10 @@ export function Home(){
                     <Text style={styled.buttonText}>+</Text>
                </TouchableOpacity>
             </View>
-           <Control created={task.length} />
+           <Control created={task.length} completed={completed}/>
            <FlatList 
              renderItem={({item} ) => (
-                <Task title={item} onRemove={() => handleRemove(item)}/>
+                <Task title={item} onRemove={() => handleRemove(item)} checked={ckecked} onCheck={() => habdleCheck(item)}/>
              )}
              data={task}
              keyExtractor={item => item}
